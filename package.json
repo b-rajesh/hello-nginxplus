@@ -1,11 +1,11 @@
 {
-  "name": "@mendhak/http-echo",
+  "name": "hello-nginxlpus",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mendhak/docker-http-echo"
+    "url": "https://github.com/b-rajesh/hello-nginxplus"
   },
-  "version": "1.0.1",
-  "description": "JSON service for debugging a web setup",
+  "version": "1.0.0",
+  "description": "JSON service for a backend need",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -20,6 +20,6 @@
     "concat-stream": "1.6.0",
     "express": "4.16.2",
     "jsonwebtoken": "8.1.0",
-    "morgan": "1.9.0"
+    "morgan": "^1.10.0"
   }
 }

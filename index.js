@@ -19,7 +19,7 @@ app.use(function(req, res, next){
   }));
 });
 
-app.all('*', (req, res) => {
+app.all('/hello-nginxplus', (req, res) => {
   const echo = {
     path: req.path,
     headers: req.headers,
@@ -41,27 +41,11 @@ app.all('*', (req, res) => {
       servername: req.connection.servername
     }
   };
-  if (process.env.JWT_HEADER) {
-    const token = req.headers[process.env.JWT_HEADER.toLowerCase()];
-    if (!token) {
-      echo.jwt = token;
-    } else {
-      const decoded = jwt.decode(token, {complete: true});
-      echo.jwt = decoded;
-    }
-  }
   res.json(echo);
   console.log('-----------------')
-  console.log(echo);
 });
 
-const sslOpts = {
-  key: require('fs').readFileSync('privkey.pem'),
-  cert: require('fs').readFileSync('fullchain.pem'),
-};
-
-var httpServer = http.createServer(app).listen(process.env.HTTP_PORT || 80);
-var httpsServer = https.createServer(sslOpts,app).listen(process.env.HTTPS_PORT || 443);
+var httpServer = http.createServer(app).listen(process.env.HTTP_PORT || 3600);
 
 let calledClose = false;
 
