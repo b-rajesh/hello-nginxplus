@@ -9,11 +9,11 @@
 
 ## Usage
 
-    docker run -p 8080:80 -p 8443:443 --rm -t hello-nginxplus
+    docker run -p 3000:3000 --rm -t hello-nginxplus
 
 Test it with httpie
 
-    http :3600/hello-nginxplus
+    http :3000/hello-nginxplus
 
 Output would look like this
 ```

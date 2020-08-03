@@ -49,7 +49,7 @@ app.all('/hello-nginxplus', (req, res) => {
   console.log('-----------------')
 });
 
-var httpServer = http.createServer(app).listen(process.env.HTTP_PORT || 3600);
+var httpServer = http.createServer(app).listen(process.env.HTTP_PORT || 3000);
 
 let calledClose = false;
 
