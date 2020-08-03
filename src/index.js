@@ -19,6 +19,10 @@ app.use(function(req, res, next){
   }));
 });
 
+app.get('/hello-nginxplus/health', (req, res) => {
+  res.send({ hello: 'I am fine' });
+});
+
 app.all('/hello-nginxplus', (req, res) => {
   const echo = {
     path: req.path,
