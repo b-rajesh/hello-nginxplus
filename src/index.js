@@ -19,11 +19,11 @@ app.use(function(req, res, next){
   }));
 });
 
-app.get('/hello-nginxplus/health', (req, res) => {
+app.get('/hello-nginxplus-api/health', (req, res) => {
   res.send({ hello: 'I am fine' });
 });
 
-app.all('/hello-nginxplus', (req, res) => {
+app.all('/hello-nginxplus-api', (req, res) => {
   const echo = {
     path: req.path,
     headers: req.headers,

@@ -13,7 +13,7 @@
 
 Test it with httpie
 
-    http :3000/hello-nginxplus
+    http :3000/hello-nginxplus-api
 
 Output would look like this
 ```
