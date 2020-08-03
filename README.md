@@ -1,5 +1,10 @@
 # A Simple nodeJS service - hello-nginxplus for docker and vm image
 
+## To create a image for GCP to reference it while deploying through Terraform - You need to install Packer(https://www.packer.io/)
+```sh
+$ packer build hello-gcp-image.json
+```
+
 ## Docker build
 
     docker build -t hello-nginxplus . no-cache
